@@ -43,8 +43,6 @@ for USERNAME in "$@"; do
 
     {
         echo "Välkommen $USERNAME"
-        echo ""
-        echo "Andra användare på systemet:"
         cut -d: -f1 /etc/passwd | grep -v "^$USERNAME$"
     } > "$WELCOME_FILE"
 
